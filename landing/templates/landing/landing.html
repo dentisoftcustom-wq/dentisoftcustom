@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Dentisoft Custom – Custom Dental Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+        .hero-img, .feature-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        @media (max-width: 576px) {
+            h1 { font-size: 1.9rem; }
+            h3, h4 { font-size: 1.3rem; }
+            p { font-size: 0.95rem; }
+            .section { padding: 40px 15px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<div class="container text-center section">
+    <h1>Custom Dental Software Built Around Your Clinic</h1>
+    <p class="lead">
+        Not generic dental software. Dentisoft Custom is designed and personalized for how <strong>YOUR</strong> clinic works.
+        <br>Toronto 🇨🇦
+    </p>
+
+    <img src="{% static 'landing/images/hero_dental.png' %}" alt="Dentisoft Custom Software" class="hero-img">
+
+    <div class="row justify-content-center my-4" id="form">
+        <div class="col-12 col-md-6">
+            <form method="post" class="p-4 border rounded shadow">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary w-100">
+                    Get My Free Custom Demo
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <p class="text-muted mt-2">
+        No commitment · Built for Canadian clinics · Local support
+    </p>
+</div>
+
+<!-- PROBLEMS / FEATURES -->
+<div class="container section">
+    <div class="row text-center">
+
+        <div class="col-12 col-md-6 my-3">
+            <img src="{% static 'landing/images/no_shows.png' %}" alt="Reduce No-Shows" class="feature-img">
+            <h4>Reduce No-Shows Automatically</h4>
+            <p>
+                Smart SMS & email reminders tailored to your clinic rules.
+                Patients confirm in one click.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6 my-3">
+            <img src="{% static 'landing/images/digital_forms.png' %}" alt="Digital Forms" class="feature-img">
+            <h4>Paperless Digital Forms</h4>
+            <p>
+                Patients complete forms before arrival.
+                Digital signatures. Faster check-ins.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6 my-3">
+            <img src="{% static 'landing/images/treatment_plan.png' %}" alt="Treatment Plans" class="feature-img">
+            <h4>Clear Treatment Plans</h4>
+            <p>
+                Visual treatment plans with transparent pricing.
+                Higher acceptance, fewer questions.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6 my-3">
+            <img src="{% static 'landing/images/scheduling.png' %}" alt="Scheduling" class="feature-img">
+            <h4>Visual Scheduling</h4>
+            <p>
+                Color-coded, drag-and-drop agenda.
+                See your entire day at a glance.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="#form" class="btn btn-outline-primary mt-4">
+        See How This Fits My Clinic
+    </a>
+</div>
+
+<!-- CUSTOMIZATION SECTION -->
+<div class="container text-center section bg-light">
+    <img src="{% static 'landing/images/customization.png' %}" alt="Custom Software" class="feature-img">
+    <h4>Fully Customizable — Not Generic</h4>
+    <p>
+        Dentisoft Custom is built specifically for each clinic.
+        We personalize workflows, features, and even the interface design.
+    </p>
+    <p class="fw-bold">
+        Your clinic. Your software. Your way.
+    </p>
+</div>
+
+<!-- TRUST / WHO IS BEHIND -->
+<div class="container section text-center">
+    <h4>Built by Developers Who Understand Clinics</h4>
+    <p>
+        Dentisoft Custom is developed by professionals with real experience building
+        software for private clinics. We work directly with each clinic to design
+        a system that truly fits their workflow.
+    </p>
+</div>
+
+<!-- TRANSFORMATION -->
+<div class="container text-center section">
+    <img src="{% static 'landing/images/less_stress_more_patients.png' %}" alt="Clinic Transformation" class="feature-img">
+    <h4>What Clinics Notice After 30 Days</h4>
+    <p>
+        Fewer missed appointments, less front-desk stress,
+        better organization, and a smoother patient experience.
+    </p>
+    <p class="fw-bold">
+        Less stress. More patients.
+    </p>
+</div>
+
+<!-- FINAL CTA -->
+<div class="container text-center section">
+    <h3>See How Dentisoft Custom Works for Your Clinic</h3>
+    <p>
+        Book a free, no-pressure consultation and discover how
+        a truly custom system can improve your clinic.
+    </p>
+    <a href="#form" class="btn btn-primary btn-lg">
+        Book Your Free Demo
+    </a>
+</div>
+
+</body>
+</html>
+
